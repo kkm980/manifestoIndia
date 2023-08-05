@@ -2,24 +2,12 @@
 import Image from 'next/image';
 import { decrement, increment, reset } from '@/redux/features/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import 'tailwindcss/tailwind.css';
-import { useImageFetchQuery } from '@/redux/services/userApi';
-import { useEffect } from 'react';
-import { useTheme } from "next-themes";
-
-export default function Home() {
-  const { theme } = useTheme(); // Get the theme from the NextThemesProvider
-
+export default function Profile() {
   const count = useAppSelector(state => state.counterReducer.value);
   const dispatch = useAppDispatch();
-  const { isLoading, isFetching, data, error } = useImageFetchQuery(null);
 
-  const themeStyle = {
-    backgroundColor: theme === "dark" ? "black" : "white", // Adjust colors based on theme
-    color: theme === "dark" ? "white" : "black", // Adjust text color based on theme
-  };
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${theme=="dark"?"bg-page_bg_dark":"bg-page_bg_light"}`}>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
@@ -56,25 +44,24 @@ export default function Home() {
         />
       </div>
 
-      {/* <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={`mb-3 text-sm font-semibold bg-blue text-red`}>
+          <h2 className={`mb-3 text-2xl font-semibold`}>
             Docs{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Find in-depth information about Next.js features and API.
+          </p>
         </a>
-        <p
-          className={`m-0 max-w-[30ch] text-2xl opacity-50 text-red-600 bg-amber-500`}
-        >
-          Find in-depth information about Next.js features and API.
-        </p>
+
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -125,7 +112,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div> */}
+      </div>
 
       <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
         <h4 style={{ marginBottom: 16 }}>{count}</h4>
@@ -138,48 +125,6 @@ export default function Home() {
         </button>
         <button onClick={() => dispatch(reset())}>reset</button>
       </div>
-      <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
-        <h4 style={{ marginBottom: 16 }}>{count}</h4>
-        <button onClick={() => dispatch(increment())}>increment</button>
-        <button
-          onClick={() => dispatch(decrement())}
-          style={{ marginInline: 16 }}
-        >
-          decrement
-        </button>
-        <button onClick={() => dispatch(reset())}>reset</button>
-      </div>
-
-      {error ? (
-        <p>Oh no, there was an error</p>
-      ) : isLoading || isFetching ? (
-        <p>Loading...</p>
-      ) : data.message ? (
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr 1fr',
-            gap: 20
-          }}
-        >
-          {data.message.map((user: any) => (
-            <div
-              key={user.id}
-              style={{ border: '1px solid #ccc', textAlign: 'center' }}
-            >
-              <div className="text-black">{user.title}</div>
-              <Image
-                src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
-                alt={user.name}
-                width={180}
-                height={180}
-                // style={{ height: 180, width: 180 }}
-              />
-              <h3>{user.name}</h3>
-            </div>
-          ))}
-        </div>
-      ) : null}
     </main>
   );
 }
