@@ -1,5 +1,5 @@
 "use client"
-
+import {useTheme} from "next-themes"
 import {
     Cloud,
     CreditCard,
@@ -34,6 +34,7 @@ import {
   } from "@/components/ui/dropdown-menu"
   
   export function BtnMenu() {
+    const {theme} =useTheme();
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -43,7 +44,7 @@ import {
             <div className="bg-[green] w-2 h-2 rounded-full m-[3px]"></div>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56 absolute left-[-25px]">
+        <DropdownMenuContent className={`w-56 absolute left-[-25px] ${theme==='dark' ? 'bg-[#020818]':'bg-[#FFECAF]'}`}>
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>

@@ -45,18 +45,6 @@ const routes = [
     href: "/video",
   },
   {
-    label: "Music",
-    icon: Music,
-    color: "text-emerald-500",
-    href: "/music",
-  },
-  {
-    label: "Code",
-    icon: Code,
-    color: "text-green-700",
-    href: "/code",
-  },
-  {
     label: "Settings",
     icon: Settings,
     href: "/settings",
