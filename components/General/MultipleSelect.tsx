@@ -98,14 +98,14 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
       )}
       <div className="mt-1 flex justify-between items-center w-full">
         <Badge
-         className={`ml-3 px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-blue-600 focus:outline-none hover:bg-blue-600 cursor:pointer ${theme==='dark'?'bg-[#526D82] text-white':'bg-blue-600 text-white'}`}
+         className={`ml-3 px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-blue-600 focus:outline-none hover:bg-blue-600 cursor:pointer ${theme==='dark'?'bg-[#526D82] text-white hover:bg-gray-500':'bg-blue-600 text-white hover:bg-blue-500'}`}
          onClick={handleSelectAll}
         >
             Select All
         </Badge>
         {selectedOptions.length>0 && 
         <Badge
-        className={`px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-red-600 focus:outline-none hover:bg-red-600 cursor:pointer ${theme==='dark'?'bg-[#D27685] text-white':'bg-red-600 text-white'}`}
+        className={`px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-red-600 focus:outline-none hover:bg-red-600 cursor:pointer ${theme==='dark'?'bg-[#D27685] hover:bg-red-400 text-white':'bg-red-600 hover:bg-red-500 text-white'}`}
         onClick={handleRemoveAll}
         >
           Remove All
