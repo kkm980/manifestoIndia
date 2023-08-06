@@ -134,16 +134,17 @@
 }
 
 .custom-theme-dark .react-calendar__tile {
-    color: #d3d3d3;
-    background-color: #3a4d52;
+    background-color: #020818;
+    color: #3a4d52;
+    border:1px solid #3a4d52;
     font-weight: normal;
-    border: 1px solid rgb(58, 58, 58);
+    /* border: 1px solid rgb(58, 58, 58); */
     /* other dark mode styles */
 }
 
 .custom-theme-dark .react-calendar__tile:hover {
     background-color: #3a4d52;
-    border: 1px solid white;
+    color: white;
     /* other dark mode styles */
 }
 

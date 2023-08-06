@@ -138,12 +138,12 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
             key={option.value}
             className={`flex items-center px-2 py-1 mb-2 text-sm ${theme==='dark'?'bg-black text-white':'bg-white text-black border border-black'} rounded-md`}
           >
-            <span className={`text-md xxl:text-xl ${theme==='dark'?'text-white bg-black':'text-black bg-white'}`}>{option.label}</span>
+            <span className={`text-md xxl:text-xl ${theme==='dark'?'text-[#9DB2BF] bg-black':'text-black bg-white'}`}>{option.label}</span>
             <button
               className="ml-2 font-bold focus:outline-none"
               onClick={() => handleRemoveOption(option)}
             >
-              <TiDelete className={`w-5 h-5 ${theme==='dark'?'text-red-400':'text-red-600'}`} />
+              <TiDelete className={`w-5 h-5 ${theme==='dark'?'text-red-300':'text-red-600'}`} />
             </button>
           </div>
         ))}
