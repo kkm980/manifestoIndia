@@ -39,7 +39,7 @@ export default function FilterComponent() {
   return (
     <div>
       <div
-        className={cn('relative font-medium text-2xl ml-2 my-2', poppinsFont.className)}
+        className={cn(`relative font-medium text-2xl ml-2 my-2 ${theme==='dark'?'text-[#9DB2BF]':'text-black'}`, poppinsFont.className)}
       >
         Filter your Search
       </div>

@@ -79,7 +79,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
   return (
     <div className="mb-8 mt-4 relative w-[300px]">
       <div className="absolute -top-6 left-3 w-max mt-0 bg-transparent">
-        <div className={`${theme==='dark'?'text-white':'text-black'} text-semibold text-xs md:text-sm lg:text-lg xl:text-xl xxl:text-xxl`}>{placeholder}</div>
+        <div className={`${theme==='dark'?'text-[#749BC2]':'text-black'} text-semibold text-xs md:text-sm lg:text-lg xl:text-xl xxl:text-xxl`}>{placeholder}</div>
       </div>
       <div className="">
       <Input
@@ -98,14 +98,14 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
       )}
       <div className="mt-1 flex justify-between items-center w-full">
         <Badge
-         className={`ml-3 px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-blue-600 focus:outline-none hover:bg-blue-600 cursor:pointer ${theme==='dark'?'bg-[#526D82] text-white hover:bg-gray-500':'bg-blue-600 text-white hover:bg-blue-500'}`}
+         className={`ml-3 px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-blue-600 focus:outline-none hover:bg-blue-600 cursor:pointer ${theme==='dark'?'bg-transparent border border-[#526D82] text-[#526D82] hover:bg-[#526D82] hover:text-white':'bg-transparent border border-blue-600 text-blue-600 hover:text-white hover:bg-blue-500'}`}
          onClick={handleSelectAll}
         >
             Select All
         </Badge>
         {selectedOptions.length>0 && 
         <Badge
-        className={`px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-red-600 focus:outline-none hover:bg-red-600 cursor:pointer ${theme==='dark'?'bg-[#D27685] hover:bg-red-400 text-white':'bg-red-600 hover:bg-red-500 text-white'}`}
+        className={`px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-red-600 focus:outline-none hover:bg-red-600 cursor:pointer ${theme==='dark'?'bg-transparent border border-[#D27685] text-red-400 hover:bg-[#D27685] hover:text-white':'bg-transparent border border-red-600 text-red-600 hover:bg-red-500 hover:text-white'}`}
         onClick={handleRemoveAll}
         >
           Remove All

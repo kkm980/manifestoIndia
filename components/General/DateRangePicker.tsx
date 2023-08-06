@@ -61,7 +61,7 @@ const DateRangeSelector: React.FC<DateRangeSelectorProps> = ({  value, onChange 
 
   return (
     <div className=''>
-      <div className='text-xl xl:text-xl xxl:text-xxl'>Choose a date range</div>
+      <div className={`text-xl xl:text-xl xxl:text-xxl ${theme==='dark'?'text-[#749BC2]':'text-black'}`}>Choose a date range</div>
         <DateRangePicker
           onChange={onChange}
           calendarClassName={customClassNames}
