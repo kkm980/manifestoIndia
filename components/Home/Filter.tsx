@@ -1,4 +1,4 @@
-import { Poppins, Montserrat } from "next/font/google";
+import { Poppins, Montserrat, Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
@@ -10,7 +10,7 @@ import { useTheme } from "next-themes";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import MultiSelectInput from "../General/MultipleSelect";
-const poppinsFont = Poppins({
+const poppinsFont = Inter({
   weight: "500",
   subsets: ["latin"],
 });
