@@ -19,14 +19,16 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         icon:"border-0 outline-0",
-        dropdown:"w-max h-max bg-transparent outline-0"
+        dropdown:"w-max h-max bg-transparent outline-0",
+        menu:'w-auto h-min bg-transparent outline-0'
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-max w-max p-1",
-        dropdown:"w-max h-max rounded rounded-full bg-transparent border outline-0"
+        dropdown:"w-max h-max rounded rounded-full bg-transparent border outline-0",
+        menu:'w-auto h-min'
       },
     },
     defaultVariants: {

@@ -7,6 +7,15 @@ import { useImageFetchQuery } from '@/redux/services/userApi';
 import { useEffect } from 'react';
 import { useTheme } from "next-themes";
 import FilterComponent from '@/components/Home/Filter';
+import NewsWrapper from '@/components/Home/NewsBox/NewsWrapper';
+import { Inter, Montserrat } from 'next/font/google';
+import { cn } from '@/lib/utils';
+import StickyText from '@/components/Home/NewsBox/StickyText';
+
+const poppinsFont = Inter({
+  weight: '500',
+  subsets: ['latin'],
+});
 
 export default function Home() {
   const { theme } = useTheme(); // Get the theme from the NextThemesProvider
@@ -229,20 +238,29 @@ export default function Home() {
     // </main>
 
     <main
-      className={`flex min-h-screen items-start justify-between my-[50px] ${
+      className={`relative flex min-h-screen items-start justify-between my-[50px] ${
         theme == "dark" ? "bg-page_bg_dark" : "bg-page_bg_light"
       }`}
     >
       {/* First child div (occupies 1/3rd of the space) */}
       <div className="leftContainer flex-shrink-0 w-[350px] bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto">
         {/* Content of the first child */}
-          <FilterComponent/>
+        <FilterComponent />
       </div>
 
       {/* Second child div (occupies the remaining space) */}
-      <div className="ml-[350px] flex-grow bg-blue-300">
+      <div className="relative ml-[360px] my-2 flex-grow bg-transparent">
         {/* Content of the second child */}
-        fgfgfg
+       {/* <StickyText/> */}
+        <NewsWrapper />
+        <NewsWrapper />
+        <NewsWrapper />
+        <NewsWrapper />
+         <NewsWrapper />
+          <NewsWrapper />
+          <NewsWrapper />
+          <NewsWrapper />
+          <NewsWrapper />
       </div>
     </main>
   );

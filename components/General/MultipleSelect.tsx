@@ -116,7 +116,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
       {inputValue && suggestions.length > 0 && (
         <div className="absolute z-20 w-full mt-2 bg-white border border-gray-300 rounded-md shadow-lg">
           <div
-            className={`px-4 py-2 ${theme==='dark' ?'text-white bg-[#526D82]':'text-black bg-blue-600'}  cursor-pointer transition-transform duration-300 ease-in-out transform`}
+            className={`px-4 py-2 ${theme==='dark' ?'text-white bg-[#526D82]':'text-black bg-[#7F8487]'}  cursor-pointer transition-transform duration-300 ease-in-out transform`}
             onClick={() => handleOptionClick([...suggestions])}
           >
             Select all matching
@@ -124,7 +124,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
           {suggestions.map((option) => (
             <div
               key={option.value}
-              className={`px-4 py-2 cursor-pointer transition-transform duration-300 ease-in-out transform hover:text-cherry hover:bg-hover_bg ${theme==='dark'?'bg-black text-white hover:bg-[#526D82]':'bg-white text-black hover:bg-blue-500'}`}
+              className={`px-4 py-2 cursor-pointer transition-transform duration-300 ease-in-out transform hover:text-cherry hover:bg-hover_bg ${theme==='dark'?'bg-black text-white hover:bg-[#898B8A]':'bg-white text-black hover:bg-[#D1D1D1]'}`}
               onClick={() => handleOptionClick([option])}
             >
               {option.label}
