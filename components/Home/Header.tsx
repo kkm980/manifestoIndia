@@ -4,6 +4,7 @@ import { ProfileContainer } from "@/components/Home/ProfileContainer";
 import { ModeToggle } from "./ToggleMode";
 import { NavBar } from "@/components/Home/NavBar";
 import { useTheme } from "next-themes";
+
 export default function Header() {
   const { theme } = useTheme();
   return (
@@ -24,6 +25,7 @@ export default function Header() {
           style={{ order: theme === "dark" ? "2" : "1" }}
         >
           <ModeToggle />
+          
         </div>
       </div>
     </div>

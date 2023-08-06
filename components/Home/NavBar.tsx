@@ -14,7 +14,6 @@ import {
   VideoIcon,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
-
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
 

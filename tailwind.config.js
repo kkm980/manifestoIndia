@@ -23,7 +23,7 @@ module.exports = {
         saffron:"#FF7722",
         green:"#138808",
         page_bg_dark:"#020818",
-        page_bg_light:"#FFE17B",
+        page_bg_light:"#FFECAF",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

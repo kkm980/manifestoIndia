@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Providers } from "@/redux/provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster"
 import Footer from "@/components/Home/Footer";
 import Header from "@/components/Home/Header";
 export const metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
             <Header/>
             <Footer/>
             {children}
+            <Toaster />
           </Providers>{" "}
         </ThemeProvider>
       </body>
