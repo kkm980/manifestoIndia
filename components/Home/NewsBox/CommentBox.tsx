@@ -42,18 +42,18 @@ const CommentBox: React.FC<IProps> = ({ setCommentBoxOpen }) => {
 
         <ScrollArea className="h-[200px] w-[600px] border-0 mt-4 pl-4 pt-1 mt-0">
           Jokester began sneaking into the castle in the middle of the night and
-          leaving jokes all over the place: under the king's pillow, in his
-          soup, even in the royal toilet. The king was furious, but he couldn't
+          leaving jokes all over the place: under the king pillow, in his
+          soup, even in the royal toilet. The king was furious, but he could not
           seem to stop Jokester. And then, one day, the people of the kingdom
           discovered that the jokes left by Jokester were so funny that they
-          couldn't help but laugh. And once they started laughing, they couldn't
+          could not help but laugh. And once they started laughing, they couldnot
           stop. Jokester began sneaking into the castle in the middle of the
-          night and leaving jokes all over the place: under the king's pillow,
+          night and leaving jokes all over the place: under the kings pillow,
           in his soup, even in the royal toilet. The king was furious, but he
-          couldn't seem to stop Jokester. And then, one day, the people of the
+          couldnot seem to stop Jokester. And then, one day, the people of the
           kingdom discovered that the jokes left by Jokester were so funny that
-          they couldn't help but laugh. And once they started laughing, they
-          couldn't stop.
+          they couldnot help but laugh. And once they started laughing, they
+          couldnot stop.
         </ScrollArea>
 
         <ScrollArea className="h-[200px] w-[600px] pl-4">
