@@ -3,12 +3,7 @@ import { useTheme } from "next-themes";
 import { BtnMenu } from "./BtnMenu";
 import LowerContainer from "./LowerContainer";
 import { useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
 
 export default function NewsWrapper() {
   const { theme } = useTheme();
@@ -27,20 +22,24 @@ export default function NewsWrapper() {
 
       <LowerContainer setCommentBoxOpen={setCommentBoxOpen} />
 
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-      <p className="">dfdf</p>
-
+      <div className="flex flex-col justify-start items-end mx-2 text-ellipsis overflow-hidden max-h-[300px]">
+        <div className={`text-xl font-semibold mb-2 w-full text-center ${theme==='dark'?"text-white":"text-[#A0E4CB]"}`}>title text goes here</div>
+        <div className={`text-gray-600 pb-1 flex justify-start items-end h-[300px] `}>
+          <p className="text-gray-600 pb-1">
+                 Jokester began sneaking into the castle in the middle of the night and
+          leaving jokes all over the place: under the king pillow, in his
+          soup, even in the royal toilet. The king was furious, but he could not
+          seem to stop Jokester. And then, one day, the people of the kingdom
+          discovered that the jokes left by Jokester were so funny that they
+          could not help but laugh. And once they started laughing, they couldnot
+          stop. Jokester began sneaking into the castle in the middle of the
+          night and leaving jokes all over the place: under the kings pillow,
+          in his soup, even in the royal toilet. The king was furious, but he
+          couldnot seem to...<Button variant="ghost" className="px-2 py-1 text-lg bg-transparent hover:bg-transparent hover:text-[#1D5D9B]">Read more</Button>
+            </p>
+            
+        </div>
+      </div>
     </div>
   );
 }
