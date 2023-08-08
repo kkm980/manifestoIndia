@@ -20,7 +20,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         icon:"border-0 outline-0",
         dropdown:"w-max h-max bg-transparent outline-0",
-        menu:'w-auto h-min bg-transparent outline-0'
+        menu:'w-auto h-min bg-transparent outline-0',
+        unbutton:'w-min h-min bg-transparent outline-0 border-0'
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -28,7 +29,8 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-max w-max p-1",
         dropdown:"w-max h-max rounded rounded-full bg-transparent border outline-0",
-        menu:'w-auto h-min'
+        menu:'w-auto h-min',
+        unbutton:'p-0 m-0'
       },
     },
     defaultVariants: {

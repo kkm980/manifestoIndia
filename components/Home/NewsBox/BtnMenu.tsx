@@ -39,9 +39,9 @@ import {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="menu" size='menu' className="flex justify-between items-center">
-            <div className="bg-[red] w-2 h-2 rounded-full m-[3px]"></div>
-            <div className="bg-[yellow] w-2 h-2 rounded-full m-[3px]"></div>
-            <div className="bg-[green] w-2 h-2 rounded-full m-[3px]"></div>
+            <div className="bg-[red] w-1.5 h-1.5 rounded-full m-[2px]"></div>
+            <div className="bg-[yellow] w-1.5 h-1.5 rounded-full m-[2px]"></div>
+            <div className="bg-[green] w-1.5 h-1.5 rounded-full m-[2px]"></div>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className={`w-56 absolute left-[-25px] ${theme==='dark' ? 'bg-[#020818]':'bg-[#FFECAF]'}`}>

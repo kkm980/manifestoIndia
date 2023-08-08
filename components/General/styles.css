@@ -128,7 +128,7 @@
 
 .custom-theme-dark>div:nth-child(2) {
     /* Styles for the second child */
-    background-color: #000000;
+    background-color:transparent;
 
 
 }

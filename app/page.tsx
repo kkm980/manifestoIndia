@@ -249,7 +249,7 @@ export default function Home() {
       </div>
 
       {/* Second child div (occupies the remaining space) */}
-      <div className="relative ml-[360px] my-2 flex-grow bg-transparent">
+      <div className="relative ml-[380px] my-2 flex-grow bg-transparent">
         {/* Content of the second child */}
        {/* <StickyText/> */}
         <NewsWrapper />
