@@ -51,7 +51,7 @@ const CommentBox: React.FC<IProps> = ({ setCommentBoxOpen }) => {
         </ScrollArea>
 
         <Separator />
-        <ScrollArea className="h-[200px] w-[600px] pl-4">
+        <ScrollArea className={`h-[200px] w-[600px] pl-4 ${theme==='dark'?'bg-transparent':'bg-[#EAC696]'}`}>
           <div className="flex items-center space-x-4 my-4">
             <Skeleton className="h-12 w-12 rounded-full" />
             <div className="space-y-2">
