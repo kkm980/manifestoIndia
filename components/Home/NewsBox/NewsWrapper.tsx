@@ -23,9 +23,9 @@ export default function NewsWrapper() {
       <LowerContainer setCommentBoxOpen={setCommentBoxOpen} />
 
       <div className="flex flex-col justify-start items-end mx-2 text-ellipsis overflow-hidden max-h-[300px]">
-        <div className={`text-xl font-semibold mb-2 w-full text-center ${theme==='dark'?"text-white":"text-[#A0E4CB]"}`}>title text goes here</div>
-        <div className={`text-gray-600 pb-1 flex justify-start items-end h-[300px] `}>
-          <p className="text-gray-600 pb-1">
+        <div className={`text-xl font-semibold mb-2 w-full text-center ${theme==='dark'?"text-[#9DB2BF]":"text-[#A0E4CB]"}`}>title text goes here</div>
+        <div className={`pb-1 flex justify-start items-end h-[300px] `}>
+          <p className={`pb-1 ${theme==='dark'?'text-gray-600':'text-[#9DB2BF]'}`}>
                  Jokester began sneaking into the castle in the middle of the night and
           leaving jokes all over the place: under the king pillow, in his
           soup, even in the royal toilet. The king was furious, but he could not

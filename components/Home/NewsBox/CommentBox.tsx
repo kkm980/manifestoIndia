@@ -1,21 +1,9 @@
-import { FaVoteYea } from "react-icons/fa";
 import { MessagesSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
+import {useTheme} from "next-themes";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Popover,
   PopoverContent,
@@ -26,6 +14,7 @@ interface IProps {
   setCommentBoxOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const CommentBox: React.FC<IProps> = ({ setCommentBoxOpen }) => {
+    const {theme} =useTheme();
   return (
     <Popover>
       <PopoverTrigger>
@@ -35,7 +24,12 @@ const CommentBox: React.FC<IProps> = ({ setCommentBoxOpen }) => {
       </PopoverTrigger>
 
       <PopoverContent
-        className={`w-[650px] h-[400px] p-1 pt-2 pb-2 flex flex-col justify-start items-between`}
+        className={`w-[650px] h-[400px] p-1 pt-2 pb-2 flex flex-col justify-start items-between ${theme==='dark'?'bg-page_bg_dark':
+        'bg-page_bg_light'} ${
+            theme === "dark"
+              ? "shadow-lg shadow-slate-500"
+              : "shadow-lg shadow-orange-500"
+          }`}
       >
         <div className="text-[24px] ml-4">Title of the post</div>
         <Separator />
@@ -56,6 +50,7 @@ const CommentBox: React.FC<IProps> = ({ setCommentBoxOpen }) => {
           couldnot stop.
         </ScrollArea>
 
+        <Separator />
         <ScrollArea className="h-[200px] w-[600px] pl-4">
           <div className="flex items-center space-x-4 my-4">
             <Skeleton className="h-12 w-12 rounded-full" />
@@ -86,7 +81,7 @@ const CommentBox: React.FC<IProps> = ({ setCommentBoxOpen }) => {
             </div>
           </div>
           <div className="flex items-center space-x-4 my-4">
-            <Skeleton className="h-12 w-12 rounded-full" />
+            <Skeleton className={`h-12 w-12 rounded-full`} />
             <div className="space-y-2">
               <Skeleton className="h-4 w-[200px]" />
               <Skeleton className="h-4 w-[250px]" />

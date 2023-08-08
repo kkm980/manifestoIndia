@@ -20,7 +20,7 @@ export function PollBox() {
             <FaVoteYea color="#A0E4CB" size={26}/>
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] ">
         <DialogHeader>
           <DialogTitle>
           
