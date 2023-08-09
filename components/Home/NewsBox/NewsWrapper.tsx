@@ -10,7 +10,7 @@ export default function NewsWrapper() {
   const [commentBoxOpen, setCommentBoxOpen] = useState(false);
   return (
     <div
-      className={`z-20 relative w-[50%] h-auto max-h-[300px] rounded-xl m-8 ${
+      className={`z-20 relative w-[480px] h-auto max-h-[300px] rounded-xl xs:my-4 lg:m-8 ${
         theme === "dark"
           ? "bg-black shadow shadow-slate-500"
           : "bg-page_bg_dark shadow-lg shadow-orange-500"

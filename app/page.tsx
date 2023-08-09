@@ -238,18 +238,18 @@ export default function Home() {
     // </main>
 
     <main
-      className={`relative flex min-h-screen items-start justify-between my-[50px] ${
+      className={` relative flex min-h-screen items-start justify-between my-[50px] ${
         theme == "dark" ? "bg-page_bg_dark" : "bg-page_bg_light"
       }`}
     >
       {/* First child div (occupies 1/3rd of the space) */}
-      <div className="leftContainer flex-shrink-0 w-[350px] bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto">
+      <div className="leftContainer flex-shrink-0 w-[350px] xs:hidden lg:block bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto">
         {/* Content of the first child */}
         <FilterComponent />
       </div>
 
       {/* Second child div (occupies the remaining space) */}
-      <div className="relative ml-[380px] my-2 flex-grow bg-transparent">
+      <div className="relative xs:ml-[5px] lg:ml-[380px] my-2 flex-grow  bg-transparent">
         {/* Content of the second child */}
        {/* <StickyText/> */}
         <NewsWrapper />
