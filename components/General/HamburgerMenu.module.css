@@ -12,6 +12,7 @@
     height: 4px;
     background-color: #f11212;
     transition: transform 0.8s ease;
+    border-radius: 25px;
   }
   
   .lineHidden {
