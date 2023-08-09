@@ -68,7 +68,7 @@ export const NavBar = ({}: {}) => {
   return (
     <div
       className={cn(
-        "flex justify-between items-center mr-4 text-lg font-normal sm:w-[500px] xl:w-[700px] xxl:w-[1000px] xxxxl:w-[1200px]",
+        "xs:hidden md:flex justify-between items-center mr-4 text-lg font-normal sm:w-[500px] xl:w-[700px] xxl:w-[1000px] xxxxl:w-[1200px]",
         theme === "light" ? "dark" : "light"
       )}
     >
