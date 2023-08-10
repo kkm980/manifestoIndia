@@ -30,14 +30,9 @@ export default function FilterComponent() {
   const { theme } = useTheme();
   const toast = useToast();
   const [value, onChange] = useState<Value>([null, null]);
-  const [inputVal, setInputVal] = useState<any>();
-
-  useEffect(() => {
-    value && console.log(value, 'value');
-  }, [value]);
 
   return (
-    <div>
+    <div className={`relative`}>
       <div
         className={cn(`relative font-medium text-2xl ml-2 my-2 ${theme==='dark'?'text-[#9DB2BF]':'text-black'}`, poppinsFont.className)}
       >

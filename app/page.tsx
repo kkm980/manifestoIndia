@@ -243,7 +243,7 @@ export default function Home() {
       }`}
     >
       {/* First child div (occupies 1/3rd of the space) */}
-      <div className="leftContainer flex-shrink-0 w-[350px] xs:hidden lg:block bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden">
+      <div className="leftContainer flex-shrink-0 w-[350px] xs:hidden lg:block bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto">
         {/* Content of the first child */}
         <FilterComponent />
       </div>
