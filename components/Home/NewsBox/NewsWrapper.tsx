@@ -5,17 +5,27 @@ import LowerContainer from "./LowerContainer";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { ChipsSet } from "./Chips";
 
 export default function NewsWrapper() {
   const { theme } = useTheme();
   const [commentBoxOpen, setCommentBoxOpen] = useState(false);
+  const [tagShow, setTagShow] = useState(false);
   return (
     <div
+
       className={`z-20 relative xs:w-[360px] md:w-[480px] h-auto max-h-[300px] rounded-xl xs:my-4 lg:m-8 ${
         theme === "dark"
           ? "bg-black shadow shadow-slate-500"
           : "bg-page_bg_dark shadow-lg shadow-orange-500"
       }`}
+
+      onMouseEnter={()=>{
+        setTagShow(true);
+      }}
+      onMouseLeave={()=>{
+        setTagShow(false);
+      }}
     >
       <div className="absolute left-3 top-3">
         <BtnMenu />
@@ -23,9 +33,17 @@ export default function NewsWrapper() {
 
       <LowerContainer setCommentBoxOpen={setCommentBoxOpen} />
 
-      <div className="flex flex-col justify-start items-end mx-2 text-ellipsis overflow-hidden max-h-[300px]">
-        <div className={`text-xl font-semibold mb-2 w-full text-center ${theme==='dark'?"text-[#9DB2BF]":"text-[#A0E4CB]"}`}>title text goes here</div>
-        
+      <div className="flex flex-col justify-start items-start mx-2 text-ellipsis overflow-hidden max-h-[300px]">
+        <div className={`mb-2 ml-[40px] text-start text-xl font-semibold mt-1 ${theme==='dark'?"text-[#9DB2BF]":"text-[#A0E4CB]"}`}>
+
+          title text goes here
+          
+        </div>
+
+        <div className={`${tagShow==true?theme==="light"?"text-[#138808] w-[330px]":"text-white w-[330px]":"text-transparent  w-[0px]"} mr-2 absolute -top-3 right-0 ease-in duration-300 bg-transparent`}>
+          <ChipsSet/>
+        </div>
+
         <ScrollArea className={`xs:h-[250px] w-full border-0 xs:block md:hidden pb-1 ${theme==='dark'?'text-gray-600':'text-[#9DB2BF]'}`}>
           Jokester began sneaking into the castle in the middle of the night and
           leaving jokes all over the place: under the king pillow, in his

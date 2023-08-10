@@ -98,14 +98,14 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
       )}
       <div className="mt-1 flex justify-between items-center w-full">
         <Badge
-         className={`ml-3 px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-blue-600 focus:outline-none hover:bg-blue-600 cursor:pointer ${theme==='dark'?'bg-transparent border border-[#526D82] text-[#526D82] hover:bg-[#526D82] hover:text-white':'bg-transparent border border-blue-600 text-blue-600 hover:text-white hover:bg-blue-500'}`}
+         className={`ml-3 px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-[blue-600] focus:outline-none hover:bg-blue-600 cursor:pointer ${theme==='dark'?'bg-transparent border border-[#526D82] text-[#526D82] hover:bg-[#526D82] hover:text-white':'bg-transparent border border-[#138808] text-[#138808] hover:text-white hover:bg-[#138808]'}`}
          onClick={handleSelectAll}
         >
             Select All
         </Badge>
         {selectedOptions.length>0 && 
         <Badge
-        className={`px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-red-600 focus:outline-none hover:bg-red-600 cursor:pointer ${theme==='dark'?'bg-transparent border border-[#D27685] text-red-400 hover:bg-[#D27685] hover:text-white':'bg-transparent border border-red-600 text-red-600 hover:bg-red-500 hover:text-white'}`}
+        className={`px-2 py-1 text-md xl:text-md xxl:text-xl text-white rounded-md bg-red-600 focus:outline-none hover:bg-red-600 cursor:pointer ${theme==='dark'?'bg-transparent border border-[#D27685] text-red-400 hover:bg-[#D27685] hover:text-white':'bg-transparent border border-[#FF7722] text-[#FF7722] hover:bg-[#FF7722] hover:text-white'}`}
         onClick={handleRemoveAll}
         >
           Remove All
@@ -143,7 +143,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
               className="ml-2 font-bold focus:outline-none"
               onClick={() => handleRemoveOption(option)}
             >
-              <TiDelete className={`w-5 h-5 ${theme==='dark'?'text-red-300':'text-red-600'}`} />
+              <TiDelete className={`w-5 h-5 ${theme==='dark'?'text-red-300':'text-[#FF7722]'}`} />
             </button>
           </div>
         ))}
