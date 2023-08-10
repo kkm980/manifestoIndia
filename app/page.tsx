@@ -238,12 +238,12 @@ export default function Home() {
     // </main>
 
     <main
-      className={` relative flex min-h-screen items-start justify-between my-[50px] ${
-        theme == "dark" ? "bg-page_bg_dark" : "bg-page_bg_light"
+      className={` relative flex min-h-screen items-start justify-between my-[50px] overflow-x-hidden ${
+        theme == "dark" ? "bg-page_bg_dark" : "bg-page_bg_light w-full"
       }`}
     >
       {/* First child div (occupies 1/3rd of the space) */}
-      <div className="leftContainer flex-shrink-0 w-[350px] xs:hidden lg:block bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto">
+      <div className="leftContainer flex-shrink-0 w-[350px] xs:hidden lg:block bg-transparent fixed h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden">
         {/* Content of the first child */}
         <FilterComponent />
       </div>
