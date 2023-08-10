@@ -44,6 +44,7 @@ export default function NewsWrapper() {
           <ChipsSet/>
         </div>
 
+
         <ScrollArea className={`xs:h-[250px] w-full border-0 xs:block md:hidden pb-1 ${theme==='dark'?'text-gray-600':'text-[#9DB2BF]'}`}>
           Jokester began sneaking into the castle in the middle of the night and
           leaving jokes all over the place: under the king pillow, in his
