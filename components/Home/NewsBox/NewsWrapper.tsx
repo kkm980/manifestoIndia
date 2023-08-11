@@ -14,7 +14,7 @@ export default function NewsWrapper() {
   return (
     <div
 
-      className={`z-20 relative xs:w-[360px] md:w-[480px] h-auto max-h-[300px] rounded-xl xs:my-4 lg:m-8 ${
+      className={`z-20 relative xs:w-[360px] md:w-[480px] h-auto max-h-[300px] rounded-xl xs:my-[50px] lg:m-8 md:my-[30px] ${
         theme === "dark"
           ? "bg-black shadow shadow-slate-500"
           : "bg-page_bg_dark shadow-lg shadow-orange-500"
